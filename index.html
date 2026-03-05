@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Stream - TV Vitalícia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0a0b10;
+            --card-dark: #161821;
+            --accent-purple: #8a2be2;
+            --accent-blue: #00d2ff;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --cta-color: #39ff14; /* Verde Neon */
+        }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
+
+        /* Header / Logo */
+        header { padding: 50px 0 20px; }
+        .logo { font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 10px; }
+        .logo span { color: var(--accent-blue); }
+        
+        .badge { 
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue)); 
+            padding: 6px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; 
+            text-transform: uppercase;
+        }
+
+        h1 { font-size: 2.4rem; margin: 25px 0 10px; line-height: 1.2; }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
+
+        /* Card de Preço */
+        .price-card {
+            background: var(--card-dark);
+            border: 1px solid #2a2d3a;
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+        }
+
+        .old-price { text-decoration: line-through; color: #ff4d4d; font-size: 1.2rem; }
+        .new-price { font-size: 4.5rem; font-weight: bold; margin: 5px 0; }
+        .price-info { color: var(--accent-blue); font-weight: bold; margin-bottom: 25px; display: block; }
+
+        /* Botões */
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; padding: 22px; border-radius: 15px; font-weight: bold; font-size: 1.3rem; margin-bottom: 15px; transition: 0.3s; }
+        .btn-buy { background: var(--cta-color); color: #000; box-shadow: 0 5px 15px rgba(57, 255, 20, 0.2); }
+        .btn-buy:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(57, 255, 20, 0.4); }
+        
+        .btn-secondary { background: #1c1f2b; color: #fff; font-size: 1rem; border: 1px solid #2a2d3a; }
+        .btn-secondary:hover { background: #2a2d3a; }
+        .fa-telegram { color: #24A1DE; }
+        .fa-facebook { color: #1877F2; }
+
+        /* Garantia */
+        .garantia { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 25px; color: #ffd700; font-size: 0.9rem; font-weight: 600; }
+
+        /* FAQ */
+        .faq-section { text-align: left; margin: 60px 0; }
+        .faq-item { background: #161821; margin-bottom: 12px; border-radius: 12px; border: 1px solid #2a2d3a; cursor: pointer; }
+        .faq-question { padding: 20px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s; color: var(--text-muted); }
+        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 200px; }
+
+        footer { padding: 50px 0; border-top: 1px solid #1c1f2b; color: var(--text-muted); font-size: 0.85rem; }
+        .social-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; }
+        .social-links a { color: var(--text-muted); font-size: 1.5rem; transition: 0.3s; }
+        .social-links a:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">NEXT<span>STREAM</span></div>
+            <span class="badge">🔥 Oferta de Lançamento</span>
+            <h1>Sua TV completa, sem mensalidades para sempre.</h1>
+            <p class="subtitle">Acesse canais, filmes e séries em 4K com um único pagamento.</p>
+        </header>
+
+        <section class="price-card">
+            <span class="price-info">PLANO VITALÍCIO - ACESSO ILIMITADO</span>
+            <div class="old-price">De R$ 149,90</div>
+            <div class="new-price">R$ 69,90</div>
+            <p style="margin-bottom: 30px; opacity: 0.8;">Pague uma vez. Use para sempre.</p>
+            
+            <a href="#" class="btn btn-buy">QUERO MEU ACESSO AGORA</a>
+            
+            <a href="https://t.me/SEU_USER" class="btn btn-secondary">
+                <i class="fab fa-telegram"></i> Suporte via Telegram
+            </a>
+
+            <div class="garantia">
+                <i class="fas fa-check-circle"></i>
+                GARANTIA INCONDICIONAL DE 7 DIAS
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">Dúvidas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Como funciona o pagamento único? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">Diferente de assinaturas comuns, na Next Stream você paga apenas R$ 69,90 uma única vez e nunca mais recebe faturas mensais. O acesso é vitalício.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Onde recebo meus dados? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">Após a aprovação do pagamento, você recebe um guia no seu e-mail com as instruções de instalação e o link para solicitar sua chave de ativação.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Funciona em Smart TV e Celular? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer">Sim! Compatível com Smart TVs (Samsung, LG, Android), TV Box, Chromecast, Smartphones e Computadores.</div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://facebook.com/SUA_PAGINA" title="Siga no Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/SEU_USER" title="Canal Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>&copy; 2024 <strong>Next Stream Digital</strong>. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.7rem;">Este site não faz parte do Facebook ou da Meta Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Lógica do FAQ
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const icon = item.querySelector('i');
+                if (item.classList.contains('active')) {
+                    icon.classList.replace('fa-plus', 'fa-minus');
+                } else {
+                    icon.classList.replace('fa-minus', 'fa-plus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
